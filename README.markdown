@@ -5,7 +5,7 @@ Andar revisando la página de Estafeta para saber qué pedo con tus pedidos es u
 
 ## Install
     gem install httparty nokogiri daemons boxcar_api
-    git clone git@github.com:psm/estafeta
+    git clone https://github.com/psm/estafeta.git
 
 ## Usage
     ./revisa NUMERO_DE_GUIA TU_CORREO_DE_BOXCAR
