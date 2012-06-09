@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ $1 == 'stop' ]
+then
+	ruby daemon.rb stop
+	exit 0;
+fi
+
+if [ -z $0 ]
+then
+   echo "USAGE: ./revisa NUMERO_DE_GUIA TU_CORREO_DE_BOXCAR"
+   echo "Para detener: ./revisa stop"
+   exit 65;
+fi
+
+if [ $# -ne 2 ]
+then
+	echo "USAGE: ./revisa NUMERO_DE_GUIA TU_CORREO_DE_BOXCAR"
+	echo "Para detener: ./revisa stop"
+	exit 65;
+fi
+
+ruby daemon.rb run -- $1 $2
